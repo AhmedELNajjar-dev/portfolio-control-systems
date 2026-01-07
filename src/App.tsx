@@ -471,10 +471,7 @@ function App() {
                     <span className="w-2 h-2 bg-sky-600 rounded-full mr-3"></span>
                     AI & ML Specialist
                   </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-sky-600 rounded-full mr-3"></span>
-                    Industry 4.0 Analyst
-                  </li>
+
                 </ul>
               </div>
             </div>
