@@ -14,7 +14,8 @@ import {
   Award,
   Target,
   ArrowRight,
-  TrendingUp
+  TrendingUp,
+  Cpu
 } from 'lucide-react';
 
 function App() {
@@ -26,99 +27,6 @@ function App() {
   };
 
   const projects = [
-    {
-      id: 'recommendation-engine',
-      title: 'Movie Collaborative Recommendation System',
-      shortDescription: 'A movie recommendation system using collaborative filtering to suggest films based on user preferences and previous ratings.',
-      fullDescription: 'This project implements a comprehensive movie recommendation system using collaborative filtering to suggest films based on user preferences and previous ratings. The system is divided into two main components: Data Preprocessing & Model Training, and a User Interface built with Flask. The data preprocessing involves cleaning raw datasets (movies.csv, ratings.csv), creating pivot tables mapping users to movie ratings, handling missing values, and filtering out low-activity users/movies. The system converts datasets into sparse matrices for efficiency and trains a K-Nearest Neighbors (KNN) model with cosine similarity to identify similar movies. The Flask-based UI allows users to enter a movie title and receive 10 personalized recommendations displayed dynamically.',
-      technologies: ['Python', 'Flask', 'KNN', 'Pandas', 'NumPy', 'Scikit-learn', 'HTML', 'Matplotlib', 'Scipy'],
-      features: [
-        'Data preprocessing and cleaning of raw movie datasets',
-        'User-movie pivot table creation with missing value handling',
-        'Sparse matrix optimization for memory efficiency',
-        'KNN model training with cosine similarity',
-        'Flask web interface for movie recommendations',
-        'Model serialization using Pickle for reuse',
-        'Dynamic recommendation display system'
-      ],
-      metrics: {
-        recommendations: '10 movies',
-        algorithm: 'KNN + Cosine Similarity',
-        interface: 'Flask Web App'
-      },
-      images: [
-        '/images/1.png',
-        '/images/2.png',
-        '/images/3.png',
-        '/images/4.png',
-        '/images/5.png'
-      ],
-      demoUrl: '#',
-      codeUrl: 'https://github.com/AhmedELNajjar-dev/Movie-recommendation-system-main'
-    },
-    {
-      id: 'database-management',
-      title: 'Gym Management System',
-      shortDescription: 'A comprehensive web-based database-driven application designed to streamline and automate daily operations of a fitness center.',
-      fullDescription: 'The Gym Management System is a web-based database-driven application designed to streamline and automate the daily operations of a fitness center. The project leverages MySQL for database management and PHP for backend integration, ensuring efficient storage, retrieval, and manipulation of gym-related data. The main objective is to eliminate inefficiencies of manual record-keeping and provide a centralized platform where administrators, trainers, and members can interact seamlessly. The system ensures secure authentication for administrators, allows trainers to manage their clients effectively, and supports members in tracking their workouts, diets, and participation in gym activities. Built with normalized MySQL database to reduce redundancy and enforced with primary and foreign key constraints.',
-      technologies: ['MySQL', 'PHP', 'HTML', 'CSS', 'Database Design', 'SQL', 'CRUD Operations'],
-      features: [
-        'Secure admin authentication and management dashboard',
-        'Member Management: Register, update, search, and delete gym member records while maintaining trainer assignments and workout/diet tracking',
-        'Trainer Management: Add, update, or delete trainer profiles and oversee exercises, diet plans, and classes',
-        'Class Scheduling: Create and assign fitness classes with cost, duration, and member participation tracking',
-        'Diet & Exercise Tracking: Assign and monitor personalized routines for each member',
-        'Supplement Management: Maintain inventory, stock levels, categories, and expiration dates',
-        'Contact & Communication: Member inquiry and feedback system',
-        'Parameterized queries for SQL injection prevention'
-      ],
-      metrics: {
-        database: 'MySQL Normalized',
-        security: 'SQL Injection Protected',
-        operations: 'Full CRUD Support'
-      },
-      images: [
-        '/images/DB1.jpg',
-        '/images/DB2.jpg',
-        '/images/DB3.png',
-        '/images/DB4.png',
-        '/images/DB5.png',
-        '/images/DB6.jpg',
-        '/images/DB7.jpg'
-      ],
-      demoUrl: '#',
-      codeUrl: 'https://github.com/AhmedELNajjar-dev/Database-Gym-Management-System'
-    },
-    {
-      id: 'network-intrusion-detection',
-      title: 'Network Intrusion Detection System',
-      shortDescription: 'An intelligent ML-based Network Intrusion Detection System achieving 99.88% accuracy using behavioral analysis on CICIDS-2017 dataset.',
-      fullDescription: 'A Machine Learning-driven Network Intrusion Detection System (NIDS) built for the Digital Egypt Pioneers Initiative that learns how attacks behave rather than memorizing signatures. Trained on CICIDS-2017 dataset containing 2.8M network flow records with 14 distinct attack vectors including DoS, DDoS, PortScan, Brute Force, Web Attacks, Botnet, and Infiltration. The system implements comprehensive data cleaning (fixing 12-hour clock bug, removing duplicates), advanced feature engineering (reducing 79 features to 26 critical ones), and strategic class balancing to detect rare attacks. Built with Random Forest classifier optimized through RandomizedSearchCV, achieving real-time detection capability with 1.3ms inference time.',
-      technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Random Forest', 'Streamlit', 'Matplotlib', 'Seaborn', 'CICFlowMeter'],
-      features: [
-        'Behavioral-based attack detection using machine learning',
-        'Critical data quality fixes: 12-hour clock bug, strategic deduplication',
-        'Advanced feature engineering: 79 → 26 optimized features (67% reduction)',
-        '80/20 class balancing strategy preserving all rare attack samples',
-        'Random Forest model with 5-fold cross-validation and hyperparameter tuning',
-        'Real-time threat detection dashboard with Red Team/Blue Team simulator',
-        'Comprehensive attack coverage: DoS, DDoS, PortScan, Brute Force, Web Attacks, Botnet, Infiltration',
-        'Production-ready deployment with 1.3ms inference time'
-      ],
-      metrics: {
-        accuracy: '99.88%',
-        macroF1: '96.47%',
-        inferenceTime: '1.3ms per flow'
-      },
-      images: [
-        'https://via.placeholder.com/800x600/1e3a8a/ffffff?text=NIDS+Dashboard',
-        'https://via.placeholder.com/800x600/1e40af/ffffff?text=Attack+Detection',
-        'https://via.placeholder.com/800x600/1e293b/ffffff?text=Real-time+Monitoring',
-        'https://via.placeholder.com/800x600/0f172a/ffffff?text=Feature+Analysis'
-      ],
-      demoUrl: '#',
-      codeUrl: 'https://github.com/AhmedELNajjar-dev/Depi-Final-Project'
-    },
     {
       id: 'analog-pid-controller',
       title: 'Analog PID Controller for Light Intensity Control',
@@ -186,6 +94,36 @@ function App() {
       codeUrl: '#'
     },
     {
+      id: 'network-intrusion-detection',
+      title: 'Network Intrusion Detection System',
+      shortDescription: 'An intelligent ML-based Network Intrusion Detection System achieving 99.88% accuracy using behavioral analysis on CICIDS-2017 dataset.',
+      fullDescription: 'A Machine Learning-driven Network Intrusion Detection System (NIDS) built for the Digital Egypt Pioneers Initiative that learns how attacks behave rather than memorizing signatures. Trained on CICIDS-2017 dataset containing 2.8M network flow records with 14 distinct attack vectors including DoS, DDoS, PortScan, Brute Force, Web Attacks, Botnet, and Infiltration. The system implements comprehensive data cleaning (fixing 12-hour clock bug, removing duplicates), advanced feature engineering (reducing 79 features to 26 critical ones), and strategic class balancing to detect rare attacks. Built with Random Forest classifier optimized through RandomizedSearchCV, achieving real-time detection capability with 1.3ms inference time.',
+      technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Random Forest', 'Streamlit', 'Matplotlib', 'Seaborn', 'CICFlowMeter'],
+      features: [
+        'Behavioral-based attack detection using machine learning',
+        'Critical data quality fixes: 12-hour clock bug, strategic deduplication',
+        'Advanced feature engineering: 79 → 26 optimized features (67% reduction)',
+        '80/20 class balancing strategy preserving all rare attack samples',
+        'Random Forest model with 5-fold cross-validation and hyperparameter tuning',
+        'Real-time threat detection dashboard with Red Team/Blue Team simulator',
+        'Comprehensive attack coverage: DoS, DDoS, PortScan, Brute Force, Web Attacks, Botnet, Infiltration',
+        'Production-ready deployment with 1.3ms inference time'
+      ],
+      metrics: {
+        accuracy: '99.88%',
+        macroF1: '96.47%',
+        inferenceTime: '1.3ms per flow'
+      },
+      images: [
+        'https://via.placeholder.com/800x600/1e3a8a/ffffff?text=NIDS+Dashboard',
+        'https://via.placeholder.com/800x600/1e40af/ffffff?text=Attack+Detection',
+        'https://via.placeholder.com/800x600/1e293b/ffffff?text=Real-time+Monitoring',
+        'https://via.placeholder.com/800x600/0f172a/ffffff?text=Feature+Analysis'
+      ],
+      demoUrl: '#',
+      codeUrl: 'https://github.com/AhmedELNajjar-dev/Depi-Final-Project'
+    },
+    {
       id: 'gym-management-cpp',
       title: 'Fitness Management System (C++)',
       shortDescription: 'A console-based fitness management system built in C++ that manages clients, coaches, store inventory, and user authentication with file-based data persistence.',
@@ -213,8 +151,70 @@ function App() {
       ],
       demoUrl: '#',
       codeUrl: 'https://github.com/AhmedELNajjar-dev/Gym-Management-system-C-'
+    },
+    {
+      id: 'recommendation-engine',
+      title: 'Movie Collaborative Recommendation System',
+      shortDescription: 'A movie recommendation system using collaborative filtering to suggest films based on user preferences and previous ratings.',
+      fullDescription: 'This project implements a comprehensive movie recommendation system using collaborative filtering to suggest films based on user preferences and previous ratings. The system is divided into two main components: Data Preprocessing & Model Training, and a User Interface built with Flask. The data preprocessing involves cleaning raw datasets (movies.csv, ratings.csv), creating pivot tables mapping users to movie ratings, handling missing values, and filtering out low-activity users/movies. The system converts datasets into sparse matrices for efficiency and trains a K-Nearest Neighbors (KNN) model with cosine similarity to identify similar movies. The Flask-based UI allows users to enter a movie title and receive 10 personalized recommendations displayed dynamically.',
+      technologies: ['Python', 'Flask', 'KNN', 'Pandas', 'NumPy', 'Scikit-learn', 'HTML', 'Matplotlib', 'Scipy'],
+      features: [
+        'Data preprocessing and cleaning of raw movie datasets',
+        'User-movie pivot table creation with missing value handling',
+        'Sparse matrix optimization for memory efficiency',
+        'KNN model training with cosine similarity',
+        'Flask web interface for movie recommendations',
+        'Model serialization using Pickle for reuse',
+        'Dynamic recommendation display system'
+      ],
+      metrics: {
+        recommendations: '10 movies',
+        algorithm: 'KNN + Cosine Similarity',
+        interface: 'Flask Web App'
+      },
+      images: [
+        '/images/1.png',
+        '/images/2.png',
+        '/images/3.png',
+        '/images/4.png',
+        '/images/5.png'
+      ],
+      demoUrl: '#',
+      codeUrl: 'https://github.com/AhmedELNajjar-dev/Movie-recommendation-system-main'
+    },
+    {
+      id: 'database-management',
+      title: 'Gym Management System',
+      shortDescription: 'A comprehensive web-based database-driven application designed to streamline and automate daily operations of a fitness center.',
+      fullDescription: 'The Gym Management System is a web-based database-driven application designed to streamline and automate the daily operations of a fitness center. The project leverages MySQL for database management and PHP for backend integration, ensuring efficient storage, retrieval, and manipulation of gym-related data. The main objective is to eliminate inefficiencies of manual record-keeping and provide a centralized platform where administrators, trainers, and members can interact seamlessly. The system ensures secure authentication for administrators, allows trainers to manage their clients effectively, and supports members in tracking their workouts, diets, and participation in gym activities. Built with normalized MySQL database to reduce redundancy and enforced with primary and foreign key constraints.',
+      technologies: ['MySQL', 'PHP', 'HTML', 'CSS', 'Database Design', 'SQL', 'CRUD Operations'],
+      features: [
+        'Secure admin authentication and management dashboard',
+        'Member Management: Register, update, search, and delete gym member records while maintaining trainer assignments and workout/diet tracking',
+        'Trainer Management: Add, update, or delete trainer profiles and oversee exercises, diet plans, and classes',
+        'Class Scheduling: Create and assign fitness classes with cost, duration, and member participation tracking',
+        'Diet & Exercise Tracking: Assign and monitor personalized routines for each member',
+        'Supplement Management: Maintain inventory, stock levels, categories, and expiration dates',
+        'Contact & Communication: Member inquiry and feedback system',
+        'Parameterized queries for SQL injection prevention'
+      ],
+      metrics: {
+        database: 'MySQL Normalized',
+        security: 'SQL Injection Protected',
+        operations: 'Full CRUD Support'
+      },
+      images: [
+        '/images/DB1.jpg',
+        '/images/DB2.jpg',
+        '/images/DB3.png',
+        '/images/DB4.png',
+        '/images/DB5.png',
+        '/images/DB6.jpg',
+        '/images/DB7.jpg'
+      ],
+      demoUrl: '#',
+      codeUrl: 'https://github.com/AhmedELNajjar-dev/Database-Gym-Management-System'
     }
-
   ];
 
   const ProjectModal = ({ project, onClose }: { project: typeof projects[0], onClose: () => void }) => {
@@ -378,7 +378,6 @@ function App() {
               <button onClick={() => scrollToSection('about')} className="text-gray-300 hover:text-blue-400 transition-colors">About</button>
               <button onClick={() => scrollToSection('skills')} className="text-gray-300 hover:text-blue-400 transition-colors">Skills</button>
               <button onClick={() => scrollToSection('projects')} className="text-gray-300 hover:text-blue-400 transition-colors">Projects</button>
-              <button onClick={() => scrollToSection('services')} className="text-gray-300 hover:text-blue-400 transition-colors">Services</button>
               <button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-blue-400 transition-colors">Contact</button>
             </div>
           </div>
@@ -403,13 +402,13 @@ function App() {
             <span className="text-white">Ahmed Mamdouh</span> <span className="text-sky-400">El Najjar</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            Data Scientist | Machine Learning & AI Developer
+            Computer Systems Engineer | Embedded Systems & Industrial Automation
           </p>
           <button 
-            onClick={() => scrollToSection('contact')}
+            onClick={() => scrollToSection('projects')}
             className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-500 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 border border-blue-500/50"
           >
-            Hire Me
+            View Projects
           </button>
           
           <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
@@ -463,7 +462,7 @@ function App() {
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-sky-600 rounded-full mr-3"></span>
-                    Freelance Data Scientist
+                    Control Systems Enthusiast
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-sky-600 rounded-full mr-3"></span>
@@ -471,7 +470,7 @@ function App() {
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-sky-600 rounded-full mr-3"></span>
-                    Database Design Expert
+                    Industry 4.0 Analyst
                   </li>
                 </ul>
               </div>
@@ -512,11 +511,12 @@ function App() {
       <section id="skills" className="py-20 bg-gray-900">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-white mb-12 text-center">Skills & Expertise</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 p-6 rounded-2xl border border-slate-700/50">
               <Code className="w-8 h-8 text-sky-600 mb-4" />
               <h3 className="text-xl font-bold text-white mb-3">Programming</h3>
               <ul className="text-gray-300 space-y-1">
+                <li>C++</li>
                 <li>Python</li>
                 <li>SQL</li>
                 <li>HTML/CSS</li>
@@ -526,14 +526,15 @@ function App() {
             </div>
             
             <div className="bg-gradient-to-br from-blue-900/50 to-blue-800/50 p-6 rounded-2xl border border-blue-700/50">
-              <Brain className="w-8 h-8 text-blue-600 mb-4" />
-              <h3 className="text-xl font-bold text-white mb-3">Machine Learning</h3>
+              <Cpu className="w-8 h-8 text-blue-600 mb-4" />
+              <h3 className="text-xl font-bold text-white mb-3">Embedded & Control</h3>
               <ul className="text-gray-300 space-y-1">
-                <li>Data Cleaning</li>
-                <li>Preprocessing</li>
-                <li>Feature Engineering</li>
-                <li>KNN Algorithm</li>
-                <li>Recommendation Systems</li>
+                <li>C/C++</li>
+                <li>PID Control</li>
+                <li>PLC Concepts</li>
+                <li>Circuit Design</li>
+                <li>Microcontrollers (AVR)</li>
+                <li>Sensors & Actuators</li>
               </ul>
             </div>
             
@@ -541,80 +542,12 @@ function App() {
               <Settings className="w-8 h-8 text-gray-400 mb-4" />
               <h3 className="text-xl font-bold text-white mb-3">Tools & Libraries</h3>
               <ul className="text-gray-300 space-y-1">
-                <li>Pandas</li>
-                <li>NumPy</li>
-                <li>Scikit-learn</li>
-                <li>Flask</li>
-                <li>Matplotlib</li>
-              </ul>
-            </div>
-            
-            <div className="bg-gradient-to-br from-cyan-900/50 to-cyan-800/50 p-6 rounded-2xl border border-cyan-700/50">
-              <Database className="w-8 h-8 text-cyan-600 mb-4" />
-              <h3 className="text-xl font-bold text-white mb-3">Other Skills</h3>
-              <ul className="text-gray-300 space-y-1">
+                <li>Git & Linux</li>
+                <li>Pandas & NumPy</li>
                 <li>Database Design</li>
-                <li>Data Visualization</li>
-                <li>Model Deployment</li>
                 <li>API Development</li>
-                <li>Web Applications</li>
+                <li>Scikit-learn</li>
               </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section id="services" className="py-20 bg-gray-900">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-white mb-12 text-center">Services Offered</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 p-6 rounded-2xl hover:shadow-lg transition-shadow border border-slate-700/50">
-              <div className="bg-sky-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Settings className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">Data Cleaning & Preprocessing</h3>
-              <p className="text-gray-300">Transform raw, messy data into clean, structured datasets ready for analysis and modeling.</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-900/50 to-blue-800/50 p-6 rounded-2xl hover:shadow-lg transition-shadow border border-blue-700/50">
-              <div className="bg-blue-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Brain className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">ML Model Development</h3>
-              <p className="text-gray-300">Build custom machine learning models tailored to your specific business needs and objectives.</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 p-6 rounded-2xl hover:shadow-lg transition-shadow border border-gray-700/50">
-              <div className="bg-gray-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Target className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">AI-Powered Recommendations</h3>
-              <p className="text-gray-300">Develop intelligent recommendation systems that personalize user experiences and drive engagement.</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-cyan-900/50 to-cyan-800/50 p-6 rounded-2xl hover:shadow-lg transition-shadow border border-cyan-700/50">
-              <div className="bg-cyan-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Award className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">Predictive Analytics</h3>
-              <p className="text-gray-300">Forecast trends and outcomes using advanced statistical models and machine learning techniques.</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-stone-900/50 to-stone-800/50 p-6 rounded-2xl hover:shadow-lg transition-shadow border border-stone-700/50">
-              <div className="bg-stone-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <ExternalLink className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">Model Deployment</h3>
-              <p className="text-gray-300">Deploy machine learning models as web APIs and applications for real-world use.</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-zinc-900/50 to-zinc-800/50 p-6 rounded-2xl hover:shadow-lg transition-shadow border border-zinc-700/50">
-              <div className="bg-zinc-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Database className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">Database Design & Optimization</h3>
-              <p className="text-gray-300">Design efficient database schemas and optimize queries for better performance.</p>
             </div>
           </div>
         </div>
