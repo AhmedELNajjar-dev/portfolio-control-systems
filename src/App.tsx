@@ -499,6 +499,7 @@ function App() {
                     <span className="bg-slate-900/50 text-slate-300 px-3 py-1 rounded-full text-sm border border-slate-700">Machine Learning</span>
                     <span className="bg-slate-900/50 text-slate-300 px-3 py-1 rounded-full text-sm border border-slate-700">Artificial Intelligence</span>
                     <span className="bg-slate-900/50 text-slate-300 px-3 py-1 rounded-full text-sm border border-slate-700">Electronic Measurements & Sensors</span>
+                    <span className="bg-slate-900/50 text-slate-300 px-3 py-1 rounded-full text-sm border border-slate-700">Linear Control Systems</span>
                   </div>
                 </div>
               </div>
