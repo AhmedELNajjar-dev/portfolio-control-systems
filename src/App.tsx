@@ -438,16 +438,19 @@ function App() {
             <div className="order-1 md:order-2">
               <h2 className="text-4xl font-bold text-white mb-6">About Me</h2>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Computer Systems Engineering student with a strong foundation in Control Systems, Embedded Engineering, and Circuit Design,
-                complemented by hands-on experience in C/C++ development and microcontroller-based automation. Adept at designing both
-                analog and digital control systems, integrating sensors, actuators, and real-time feedback loops using Arduino (AVR), Op-Amps,
-                and PID control. Well-versed in Linear Control Systems, Microprocessors & Microcontrollers, and Embedded Systems coursework,
-                with practical implementations bridging theory and hardware.
+              Computer Systems Engineering student with a strong foundation in Control
+               Systems, Embedded Engineering, and Circuit Design, complemented by 
+               hands-on experience in C/C++ development and microcontroller-based 
+               automation.Adept at designing closed-loop control systems, integrating 
+               sensors, actuators, and real-time feedback loops using Arduino (AVR), Op-Amps, 
+               and PID control. Well-versed in Linear Control Systems and Embedded Systems coursework, 
+               with practical implementations bridging theory and hardware.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Additionally skilled in Python, SQL, and Data Analysis, offering a valuable Industry 4.0 perspective on system monitoring 
-                and predictive maintenance. I'm passionate about creating impactful projects, from recommendation systems to predictive analytics 
-                and embedded control solutions, always with the goal of helping businesses and individuals make smarter decisions.
+              Additionally skilled in Python, SQL, and Data Analysis, with a strong interest in applying these tools 
+              to optimize industrial control systems and enhance operational efficiency. I am passionate about creating 
+              impactful projects—from predictive analytics to 
+              embedded control solutions—always with the goal of helping industries operate smarter.
               </p>
               
               <div className="bg-gradient-to-br from-gray-800 to-blue-900/50 p-8 rounded-2xl mt-8 border border-gray-700">
