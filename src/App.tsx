@@ -669,7 +669,7 @@ function App() {
           <div className="absolute top-10 left-10 w-32 h-32 bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-10 right-10 w-40 h-40 bg-sky-400/20 rounded-full blur-3xl animate-pulse"></div>
         </div>
-        <div className="max-w-6xl mx-auto px-6 text-center">
+        <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
           <h2 className="text-4xl font-bold text-white mb-6">Let's Build Something Intelligent Together</h2>
           <p className="text-xl text-gray-300 mb-8">
             Reach out to me for collaborations or freelance projects. I'm always excited to work on challenging data science problems.
@@ -678,17 +678,18 @@ function App() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <a 
               href="mailto:ahmedmamdouhelnajjar@hotmail.com" 
-              className="bg-white text-sky-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center shadow-lg"
+              className="bg-white text-sky-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center shadow-lg relative z-10"
             >
               <Mail className="w-5 h-5 mr-2" />
               ahmedmamdouhelnajjar@hotmail.com
             </a>
-            <div className="flex gap-4">
+            <div className="flex gap-4 relative z-10">
               <a 
                 href="https://github.com/AhmedELNajjar-dev" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-gray-800 text-white p-3 rounded-lg hover:bg-gray-700 transition-colors border border-gray-600"
+                className="bg-gray-800 text-white p-3 rounded-lg hover:bg-gray-700 transition-colors border border-gray-600 flex items-center justify-center cursor-pointer relative z-10"
+                aria-label="GitHub Profile"
               >
                 <Github className="w-5 h-5" />
               </a>
@@ -697,7 +698,8 @@ function App() {
                 href="https://www.linkedin.com/in/ahmed-el-najjar/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-gray-800 text-white p-3 rounded-lg hover:bg-gray-700 transition-colors border border-gray-600"
+                className="bg-gray-800 text-white p-3 rounded-lg hover:bg-gray-700 transition-colors border border-gray-600 flex items-center justify-center cursor-pointer relative z-10"
+                aria-label="LinkedIn Profile"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
