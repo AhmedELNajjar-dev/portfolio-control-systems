@@ -184,6 +184,35 @@ function App() {
       ],
       demoUrl: '#',
       codeUrl: '#'
+    },
+    {
+      id: 'gym-management-cpp',
+      title: 'Fitness Management System (C++)',
+      shortDescription: 'A console-based fitness management system built in C++ that manages clients, coaches, store inventory, and user authentication with file-based data persistence.',
+      fullDescription: 'The Fitness Management System is a comprehensive C++ console application designed to streamline operations for fitness centers. The system provides centralized management of clients, coaches, and store inventory, making it easier for fitness center staff to track and manage daily operations. The application features client management with unique ID validation (non-negative, less than 100000), coach management for tracking fitness trainers, store management for product inventory with price tracking, secure user authentication with login and registration, and password recovery functionality. All data is persisted using file handling, ensuring information is retained between sessions. The system was developed as a collaborative team project, demonstrating proficiency in C++ programming, file I/O operations, data structures, and console application design.',
+      technologies: ['C++', 'File Handling', 'Console Application', 'Data Structures', 'Object-Oriented Programming'],
+      features: [
+        'Client Management: Add, search, and display clients with unique ID validation',
+        'Coach Management: Add, search, and display coach information',
+        'Store Management: Add products, update prices, and manage inventory',
+        'User Authentication: Secure login system with username and password',
+        'User Registration: New user signup with unique ID assignment',
+        'Password Recovery: Retrieve forgotten passwords using unique codes',
+        'File-Based Persistence: All data saved to files for data retention',
+        'Input Validation: ID validation (non-negative, unique, less than 100000)',
+        'Console-Based Interface: User-friendly command-line interface'
+      ],
+      metrics: {
+        language: 'C++',
+        type: 'Console Application',
+        storage: 'File-Based',
+        team: '5 Members'
+      },
+      images: [
+        'https://via.placeholder.com/800x600/1e3a8a/ffffff?text=Fitness+Management+System'
+      ],
+      demoUrl: '#',
+      codeUrl: 'https://github.com/AhmedELNajjar-dev/Gym-Management-system-C-'
     }
 
   ];
