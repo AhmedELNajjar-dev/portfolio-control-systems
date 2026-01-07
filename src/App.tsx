@@ -495,7 +495,6 @@ function App() {
                 <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
                   <h4 className="font-semibold text-white mb-2">Relevant Courses:</h4>
                   <div className="flex flex-wrap gap-2">
-                    <span className="bg-slate-900/50 text-slate-300 px-3 py-1 rounded-full text-sm border border-slate-700">Data Science</span>
                     <span className="bg-slate-900/50 text-slate-300 px-3 py-1 rounded-full text-sm border border-slate-700">Machine Learning</span>
                     <span className="bg-slate-900/50 text-slate-300 px-3 py-1 rounded-full text-sm border border-slate-700">Artificial Intelligence</span>
                     <span className="bg-slate-900/50 text-slate-300 px-3 py-1 rounded-full text-sm border border-slate-700">Electronic Measurements & Sensors</span>
