@@ -118,6 +118,72 @@ function App() {
       ],
       demoUrl: '#',
       codeUrl: 'https://github.com/AhmedELNajjar-dev/Depi-Final-Project'
+    },
+    {
+      id: 'analog-pid-controller',
+      title: 'Analog PID Controller for Light Intensity Control',
+      shortDescription: 'An analog PID controller implemented using operational amplifiers to regulate light intensity of a DC lamp with manual tuning of proportional, integral, and derivative gains.',
+      fullDescription: 'This project presents the design and implementation of an analog PID (Proportional-Integral-Derivative) controller for light intensity control using operational amplifiers. The system regulates the light intensity of a DC-powered lamp to a desired reference level despite disturbances and parameter variations. The controller consists of three main stages: Proportional (P) stage using an inverting amplifier with adjustable gain Kp, Integral (I) stage using an op-amp integrator with capacitor feedback, and Derivative (D) stage using an op-amp differentiator. The outputs of these stages are summed using a summing amplifier to produce the final control signal, which drives the lamp through a power driver circuit. The system uses an LDR (Light Dependent Resistor) sensor in a voltage divider configuration to provide feedback. The controller was implemented on a custom PCB following proper analog layout practices to improve reliability and reduce noise. Individual testing of P, I, and D stages confirmed their theoretical effects on system performance, with successful integration of ID (Integral-Derivative) combination demonstrating proper control behavior.',
+      technologies: ['Operational Amplifiers', 'Analog Circuit Design', 'PCB Design', 'PID Control', 'LDR Sensors', 'Circuit Analysis', 'Control Systems'],
+      features: [
+        'Analog PID controller implementation using op-amps (741)',
+        'Three-stage design: Proportional, Integral, and Derivative control paths',
+        'Manual tuning via potentiometers for Kp, Ki, and Kd gains',
+        'Error detector circuit using difference amplifier configuration',
+        'Summing amplifier for combining P, I, and D outputs',
+        'LDR-based light intensity sensing with voltage divider circuit',
+        'Custom PCB implementation for improved reliability and noise reduction',
+        'Power driver stage for DC lamp control',
+        'Individual stage testing demonstrating theoretical control effects',
+        'Closed-loop feedback system with real-time error correction'
+      ],
+      metrics: {
+        controller: 'Analog PID',
+        implementation: 'Custom PCB',
+        stages: 'P, I, D + Summing',
+        sensor: 'LDR Voltage Divider'
+      },
+      images: [
+        'https://via.placeholder.com/800x600/1e3a8a/ffffff?text=PID+Controller+PCB',
+        'https://via.placeholder.com/800x600/1e40af/ffffff?text=Circuit+Schematic',
+        'https://via.placeholder.com/800x600/1e293b/ffffff?text=Hardware+Setup',
+        'https://via.placeholder.com/800x600/0f172a/ffffff?text=Control+Testing'
+      ],
+      demoUrl: 'https://drive.google.com/file/d/1CsdfhMaqWAs_2aYLhA0LnQzeo2E6eGiE/view?usp=drive_link',
+      codeUrl: '#'
+    },
+    {
+      id: 'solar-tracking-panel',
+      title: 'Solar Tracking Panel using Arduino',
+      shortDescription: 'An automated solar tracking system using ATmega328P microcontroller that dynamically adjusts solar panel position for optimal sunlight exposure using LDR sensors and servo motor control.',
+      fullDescription: 'This project presents an automated solar tracking system using an AVR microcontroller (ATmega328P) that dynamically adjusts a solar panel\'s position for optimal sunlight exposure throughout the day. The system utilizes two Light Dependent Resistors (LDRs) positioned on the east and west sides to detect light intensity differences. Based on the light imbalance, a servo motor (SG90) adjusts its angle to align the panel toward the brighter direction, maximizing energy collection efficiency. The implementation includes PWM-based servo control, analog-to-digital conversion for LDR inputs, and an LCD interface via I2C to display real-time data such as LDR readings, error values, and servo position. A UART interface allows manual servo angle control through serial communication for testing and calibration. The system incorporates a light threshold and a deadzone to minimize jitter in low-light conditions, ensuring stable operation. A comprehensive Proteus simulation model is included to validate hardware functionality and behavior before physical deployment. This project demonstrates the integration of analog sensors, real-time motor control, and human-machine interfaces for an energy-efficient and automated solar tracking solution.',
+      technologies: ['Arduino', 'ATmega328P', 'C/C++', 'Servo Motor Control', 'LDR Sensors', 'I2C LCD', 'UART Communication', 'PWM', 'ADC', 'Proteus Simulation', 'Embedded Systems'],
+      features: [
+        'Dual LDR sensor system for east-west light detection',
+        'Real-time servo motor control using PWM signals',
+        'I2C LCD display showing LDR readings, error values, and servo position',
+        'UART interface for manual servo angle control (0-180°)',
+        'Light threshold and deadzone implementation to prevent jitter',
+        'Analog-to-digital conversion for accurate sensor readings',
+        'Proteus simulation model for hardware validation',
+        'Automatic sun tracking throughout the day',
+        'Energy-efficient design maximizing solar panel output',
+        'Stable operation under variable lighting conditions'
+      ],
+      metrics: {
+        microcontroller: 'ATmega328P',
+        sensors: '2x LDR',
+        motor: 'SG90 Servo',
+        display: 'I2C 16x2 LCD'
+      },
+      images: [
+        'https://via.placeholder.com/800x600/1e3a8a/ffffff?text=Solar+Tracking+System',
+        'https://via.placeholder.com/800x600/1e40af/ffffff?text=LDR+Sensor+Setup',
+        'https://via.placeholder.com/800x600/1e293b/ffffff?text=Arduino+Implementation',
+        'https://via.placeholder.com/800x600/0f172a/ffffff?text=Proteus+Simulation'
+      ],
+      demoUrl: '#',
+      codeUrl: '#'
     }
 
   ];
@@ -344,14 +410,16 @@ function App() {
             <div className="order-1 md:order-2">
               <h2 className="text-4xl font-bold text-white mb-6">About Me</h2>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Hi, I'm Ahmed Mamdouh, a Data Scientist with a Computer Engineering background from Helwan University. 
-                I specialize in turning raw data into actionable insights and building AI models that solve real-world problems. 
-                With experience in database design, data preprocessing, and deploying machine learning models, I act as the 
-                bridge between raw data and practical solutions.
+                Computer Systems Engineering student with a strong foundation in Control Systems, Embedded Engineering, and Circuit Design,
+                complemented by hands-on experience in C/C++ development and microcontroller-based automation. Adept at designing both
+                analog and digital control systems, integrating sensors, actuators, and real-time feedback loops using Arduino (AVR), Op-Amps,
+                and PID control. Well-versed in Linear Control Systems, Microprocessors & Microcontrollers, and Embedded Systems coursework,
+                with practical implementations bridging theory and hardware.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                I'm passionate about creating impactful projects, from recommendation systems to predictive analytics, 
-                always with the goal of helping businesses and individuals make smarter decisions.
+                Additionally skilled in Python, SQL, and Data Analysis, offering a valuable Industry 4.0 perspective on system monitoring 
+                and predictive maintenance. I'm passionate about creating impactful projects, from recommendation systems to predictive analytics 
+                and embedded control solutions, always with the goal of helping businesses and individuals make smarter decisions.
               </p>
               
               <div className="bg-gradient-to-br from-gray-800 to-blue-900/50 p-8 rounded-2xl mt-8 border border-gray-700">
@@ -616,21 +684,24 @@ function App() {
               ahmedmamdouhelnajjar@hotmail.com
             </a>
             <div className="flex gap-4">
-  <a 
-    href="https://github.com/AhmedELNajjar-dev" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="bg-gray-800 text-white p-3 rounded-lg hover:bg-gray-700 transition-colors border border-gray-600"
-  >
-    <Github className="w-5 h-5" />
-  </a>
+              <a 
+                href="https://github.com/AhmedELNajjar-dev" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gray-800 text-white p-3 rounded-lg hover:bg-gray-700 transition-colors border border-gray-600"
+              >
+                <Github className="w-5 h-5" />
+              </a>
 
-  <a 
-
-  >
-    <Linkedin className="w-5 h-5" />
-  </a>
-</div>
+              <a 
+                href="https://www.linkedin.com/in/ahmed-el-najjar/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gray-800 text-white p-3 rounded-lg hover:bg-gray-700 transition-colors border border-gray-600"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+            </div>
           </div>
           
           <p className="text-gray-300">
